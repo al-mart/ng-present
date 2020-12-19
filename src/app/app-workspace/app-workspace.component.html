@@ -1,0 +1,44 @@
+<mat-drawer-container class="workspace-inner-container">
+  <mat-drawer class="drawer-container" mode="side" opened>
+    <div class="workspace-nav-list">
+      <div>
+        <button class="logo" mat-raised-button>Logo</button>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <mat-nav-list>
+        <mat-list-item *ngFor="let link of links"
+                       (click)="changeSection(link.id)"
+                       [ngClass]="{'selected-item': currentSection == link.id}">
+          <mat-icon>info</mat-icon>
+          <span>
+          {{link.name}}
+        </span>
+        </mat-list-item>
+      </mat-nav-list>
+
+      <button mat-raised-button (click)="logout()">Logout</button>
+    </div>
+
+  </mat-drawer>
+
+  <mat-drawer-content class="drawer-main-container">
+    <mat-card>
+      <mat-card-title>
+        <div>Balance: 1500 R</div>
+      </mat-card-title>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <ng-container *ngIf="currentSection == 0">
+          <personal-cabinet></personal-cabinet>
+        </ng-container>
+        <ng-container *ngIf="currentSection == 1">
+          <div>My orders is Under Development</div>
+        </ng-container>
+
+      </mat-card-content>
+
+    </mat-card>
+  </mat-drawer-content>
+</mat-drawer-container>

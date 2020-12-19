@@ -1,0 +1,17 @@
+<div class="spinner-outer-container">
+  <ng-container *ngIf="isTotal">
+    <div class="spinner-inner-text">{{orderPercentage}}</div>
+  </ng-container>
+  <ng-container *ngIf="!isTotal">
+    <div class="spinner-inner-text">{{orderPercentage}}/{{total}}</div>
+  </ng-container>
+  <mat-progress-spinner
+    class="example-margin"
+    [mode]="'determinate'"
+    [diameter]="75"
+    [value]="orderPercentage * 100 / total">
+  </mat-progress-spinner>
+    <div class="spinner-message">
+      {{displayMessage}}
+  </div>
+</div>

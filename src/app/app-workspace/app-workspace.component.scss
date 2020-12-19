@@ -1,0 +1,31 @@
+.drawer-container{
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.drawer-main-container{
+  width: 75%;
+  box-sizing: border-box;
+}
+.workspace-inner-container{
+  height: 100%;
+}
+
+.workspace-nav-list{
+  margin: auto;
+  width: 70%;
+}
+
+.selected-item{
+  background-color: rgb(220,220,220);
+}
+
+.logo{
+  margin: 10px auto;
+  display: block;
+}
+
+
+.circle-wrapper{
+  height: 100%;
+}

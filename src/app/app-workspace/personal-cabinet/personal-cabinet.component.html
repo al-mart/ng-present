@@ -1,0 +1,71 @@
+<div class="upper-section" fxLayout="row" fxLayoutGap="10px">
+  <mat-card fxFlex="60">
+    <mat-card-title>Your assistant for orders</mat-card-title>
+    <mat-card-content>
+      <div>
+        Fusce elit enim, porta at lacus at, placerat luctus tellus.
+        Aenean id eleifend quam.
+      </div>
+      <div>
+        Quisque quis nulla semper, condimentum risus ac, tempor justo.
+        Maecenas ac pretium felis. Nunc convallis maximus sapien, in commodo sapien dignissim non.
+      </div>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row-reverse">
+      <button mat-raised-button>Order Now</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card fxFlex="40">
+    <mat-card-content fxLayout="row"
+                      fxLayoutGap="10px"
+                      fxLayoutAlign="space-between start">
+      <div class="circle-wrapper" fxLayout="column" fxLayoutAlign="center center" *ngFor="let order of orders">
+        <circle-stat [orderPercentage]="order.percent"
+                     [displayMessage]="order.message"
+                      [isTotal]="order.isTotal"
+                     [total]="order.total"></circle-stat>
+      </div>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row-reverse">
+      <button mat-raised-button>Order Now</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div>My orders</div>
+<div class="bottom-section" fxLayout="row" fxLayoutGap="10px">
+  <mat-card fxFlex="30">
+    <mat-card-title>Executors</mat-card-title>
+    <mat-card-content class="card-content"
+                      fxLayout="row"
+                      fxLayoutGap="10px"
+                      fxLayoutAlign="space-between start">
+      <div class="circle-wrapper" fxLayout="column" fxLayoutAlign="center center" *ngFor="let executor of executors">
+        <circle-stat [orderPercentage]="executor.percent"
+                     [displayMessage]="executor.message"
+                     [isTotal]="executor.isTotal"
+                     [total]="executor.total"
+        ></circle-stat>
+      </div>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row-reverse">
+      <button mat-raised-button>Order Now</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card fxFlex="70">
+    <mat-card-title>Executors</mat-card-title>
+    <mat-card-content
+      fxLayout="row"
+      fxLayoutGap="10px"
+      fxLayoutAlign="space-between start">
+      <div class="circle-wrapper" fxLayout="column" fxLayoutAlign="center center" *ngFor="let task of tasks">
+        <circle-stat [orderPercentage]="task.percent"
+                     [displayMessage]="task.message"
+                     [isTotal]="task.isTotal"
+                     [total]="task.total"></circle-stat>
+      </div>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row-reverse">
+      <button mat-raised-button>Order Now</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
