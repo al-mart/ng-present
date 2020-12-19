@@ -1,4 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {LoginDialogComponent} from "../components/login-popup/login-dialog.component";
 
 @Component({
   selector: 'app-workspace',
@@ -12,7 +14,7 @@ export class AppWorkspaceComponent implements OnInit {
 
   currentSection = 0;
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -36,5 +38,4 @@ export class AppWorkspaceComponent implements OnInit {
   logout(){
     this.logoutChange.emit(true);
   }
-
 }

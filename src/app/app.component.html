@@ -1,4 +1,6 @@
-<app-header class="header-height"></app-header>
+<app-header class="header-height"
+(loginChange)="openDialog()"
+[isLoggedIn]="isLoggedIn"></app-header>
 <div class="main-height">
   <ng-container *ngIf="!isLoggedIn">
     <div class="outer-container" fxLayoutAlign="space-between center">

@@ -11,6 +11,9 @@ import { AppSidenavComponent } from './app-sidenav/app-sidenav.component';
 import {MaterialModule} from "./material.module";
 import { CircleStatComponent } from './components/circle-stat/circle-stat.component';
 import {PersonalCabinetComponent} from "./app-workspace/personal-cabinet/personal-cabinet.component";
+import {LoginDialogComponent} from "./components/login-popup/login-dialog.component";
+import {CommonModule} from "@angular/common";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,10 +23,15 @@ import {PersonalCabinetComponent} from "./app-workspace/personal-cabinet/persona
     AppFooterComponent,
     AppSidenavComponent,
     CircleStatComponent,
-    PersonalCabinetComponent
+    PersonalCabinetComponent,
+    LoginDialogComponent
+  ],
+  entryComponents: [
+    LoginDialogComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule

@@ -5,8 +5,8 @@
     </button>
     <span>My App</span>
   </div>
-  <div >
-    <button class="header-button" mat-icon-button aria-label="icon-button with heart icon">
+  <div *ngIf="!isLoggedIn">
+    <button (click)="loginClicked()" class="header-button" mat-icon-button aria-label="icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
       <span>Login</span>
     </button>
